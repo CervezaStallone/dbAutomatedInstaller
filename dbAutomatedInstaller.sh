@@ -76,5 +76,3 @@ case $yn in
         exit;;
     * ) echo "Please answer yes or no.";;
 esac
-
-Tue|Wed|Thu|Fri
