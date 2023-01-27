@@ -3,12 +3,13 @@ MOSQUITTOpwdTemplateF=/etc/mosquitto/dbun.txt
 MOSQUITTOpwdF=/etc/mosquitto/pwd
 MOSQUITTOconf=/etc/mosquitto/mosquitto.conf
 MOSQUITTOerror="None"
+clear
 echo "Duurzame Bouwkeet automated installer v1"
 echo "® Duurzame Bouwkeet 2023"
 sleep 5s
 read -p "Are you sure you want to run the installer? (y/n) " yn
 case $yn in
-    y|Y|yes|Yes|YES)
+    y)
         echo "Starting installer.."
         sleep 2s
         clear
@@ -70,7 +71,7 @@ case $yn in
         cat /etc/xdg/lxsession/LXDE-pi/autostart
         echo "Dont forget to follow steps for configure and install Zigbee2MQTT!!"
         break;;
-    n|N|no|No|NO )
+    n)
         echo "Cancelled Duurzame Bouwkeet Installation"
         exit;;
     * ) echo "Please answer yes or no.";;
