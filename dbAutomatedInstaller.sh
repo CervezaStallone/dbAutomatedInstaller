@@ -8,7 +8,7 @@ echo "® Duurzame Bouwkeet 2023"
 sleep 5s
 read -p "Are you sure you want to run the installer? (y/n) " yn
 case $yn in
-    [Yy]* )
+    y|Y|yes|Yes|YES)
         echo "Starting installer.."
         sleep 2s
         clear
@@ -70,8 +70,10 @@ case $yn in
         cat /etc/xdg/lxsession/LXDE-pi/autostart
         echo "Dont forget to follow steps for configure and install Zigbee2MQTT!!"
         break;;
-    [Nn]* )
+    n|N|no|No|NO )
         echo "Cancelled Duurzame Bouwkeet Installation"
         exit;;
     * ) echo "Please answer yes or no.";;
 esac
+
+Tue|Wed|Thu|Fri
