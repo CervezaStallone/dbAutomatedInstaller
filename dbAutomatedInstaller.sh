@@ -71,8 +71,10 @@ case $yn in
         cat /etc/xdg/lxsession/LXDE-pi/autostart
         echo "Dont forget to follow steps for configure and install Zigbee2MQTT!!"
         break;;
+    ;;
     n)
         echo "Cancelled Duurzame Bouwkeet Installation"
         exit;;
-    * ) echo "Please answer yes or no.";;
+    * ) echo "Please answer yes or no."
+    ;;
 esac
