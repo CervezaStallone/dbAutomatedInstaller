@@ -7,10 +7,18 @@ clear
 echo "Duurzame Bouwkeet automated installer v1"
 echo "® Duurzame Bouwkeet 2023"
 sleep 3s
+echo "
+ ___   _     _     ___  ____   __    _      ____      ___   ___   _     _       _     ____  ____ _____ 
+| | \ | | | | | | | |_)  / /  / /\  | |\/| | |_      | |_) / / \ | | | \ \    /| |_/ | |_  | |_   | |  
+|_|_/ \_\_/ \_\_/ |_| \ /_/_ /_/--\ |_|  | |_|__     |_|_) \_\_/ \_\_/  \_\/\/ |_| \ |_|__ |_|__  |_|  
 
+"
+                                                                                                       
+                                                                                                       
+                                                                                                       
 echo "Starting installer.."
 sleep 2s
-clear
+
 echo "Updating repositories to prepare for base software installation"
 sleep 1s
 sudo apt-get update -y
@@ -50,9 +58,10 @@ clear
 echo "Downloading Docker"
 sleep 1s
 curl -fsSL https://get.docker.com -o /home/pi/Downloads/get-docker.sh
+chmod +x /home/pi/Downloads/get-docker.sh
 source /home/pi/Downloads/get-docker.sh
 echo "Downloading Node-Red"
-sudo -H -u pi source <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) --node18
+sudo bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) --node18
 echo "Setting up KIOSK mode and configuring Node-Red Dashboard as page on boot"
 echo "@xset s off" | tee -a /etc/xdg/lxsession/LXDE-pi/autostart
 echo "@xset -dpms" tee -a /etc/xdg/lxsession/LXDE-pi/autostart
